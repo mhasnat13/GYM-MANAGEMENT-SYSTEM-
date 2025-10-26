@@ -49,7 +49,7 @@ exports.createBooking = async (req, res) => {
 exports.getUserBookings = async (req, res) => {
   try {
     const [bookings] = await db.query(`
-      SELECT b.*, p.titlename, p.Price, p.PackageDuratiobn, p.PackageType
+      SELECT b.*, p.titlename, p.Price, p.PackageDuration, p.PackageType
       FROM tblbooking b
       JOIN tbladdpackage p ON b.package_id = p.id
       WHERE b.userid = ?
@@ -73,7 +73,7 @@ exports.getUserBookings = async (req, res) => {
 exports.getAllBookings = async (req, res) => {
   try {
     const [bookings] = await db.query(`
-      SELECT b.*, p.titlename, p.Price, p.PackageDuratiobn,
+      SELECT b.*, p.titlename, p.Price, p.PackageDuration,
              u.fname, u.lname, u.email, u.mobile
       FROM tblbooking b
       JOIN tbladdpackage p ON b.package_id = p.id
@@ -98,7 +98,7 @@ exports.getAllBookings = async (req, res) => {
 exports.getBookingById = async (req, res) => {
   try {
     const [bookings] = await db.query(`
-      SELECT b.*, p.titlename, p.Price, p.PackageDuratiobn, p.PackageType, p.Description,
+      SELECT b.*, p.titlename, p.Price, p.PackageDuration, p.PackageType, p.Description,
              u.fname, u.lname, u.email, u.mobile, u.state, u.city
       FROM tblbooking b
       JOIN tbladdpackage p ON b.package_id = p.id

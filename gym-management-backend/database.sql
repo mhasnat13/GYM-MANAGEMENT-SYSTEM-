@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS tbladdpackage (
   category INT NOT NULL,
   titlename VARCHAR(200) NOT NULL,
   PackageType VARCHAR(100),
-  PackageDuratiobn VARCHAR(100),
+  PackageDuration VARCHAR(100),
   Price DECIMAL(10,2) NOT NULL,
   uploadphoto VARCHAR(255),
   Description TEXT,

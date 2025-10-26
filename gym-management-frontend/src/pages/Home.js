@@ -72,7 +72,7 @@ const Home = () => {
                   </div>
                   <div className="package-price">
                     <h2>${pkg.Price}</h2>
-                    <p>{pkg.PackageDuratiobn}</p>
+                    <p>{pkg.PackageDuration}</p>
                   </div>
                   <div 
                     className="package-description" 

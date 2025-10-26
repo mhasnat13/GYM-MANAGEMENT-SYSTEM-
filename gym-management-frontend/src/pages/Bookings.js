@@ -63,7 +63,7 @@ const Bookings = () => {
                   </div>
                   <div className="detail-row">
                     <span className="label">Duration:</span>
-                    <span className="value">{booking.PackageDuratiobn}</span>
+                    <span className="value">{booking.PackageDuration}</span>
                   </div>
                   <div className="detail-row">
                     <span className="label">Price:</span>

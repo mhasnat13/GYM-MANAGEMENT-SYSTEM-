@@ -56,7 +56,7 @@ exports.getPackageById = async (req, res) => {
 // Create package (Admin only)
 exports.createPackage = async (req, res) => {
   try {
-    const { category, titlename, PackageType, PackageDuratiobn, Price, Description } = req.body;
+    const { category, titlename, PackageType, PackageDuration, Price, Description } = req.body;
 
     if (!titlename || !Price) {
       return res.status(400).json({ 
@@ -66,8 +66,8 @@ exports.createPackage = async (req, res) => {
     }
 
     const [result] = await db.query(
-      'INSERT INTO tbladdpackage (category, titlename, PackageType, PackageDuratiobn, Price, Description) VALUES (?, ?, ?, ?, ?, ?)',
-      [category, titlename, PackageType, PackageDuratiobn, Price, Description]
+      'INSERT INTO tbladdpackage (category, titlename, PackageType, PackageDuration, Price, Description) VALUES (?, ?, ?, ?, ?, ?)',
+      [category, titlename, PackageType, PackageDuration, Price, Description]
     );
 
     res.status(201).json({
@@ -87,11 +87,11 @@ exports.createPackage = async (req, res) => {
 // Update package (Admin only)
 exports.updatePackage = async (req, res) => {
   try {
-    const { category, titlename, PackageType, PackageDuratiobn, Price, Description } = req.body;
+    const { category, titlename, PackageType, PackageDuration, Price, Description } = req.body;
 
     await db.query(
-      'UPDATE tbladdpackage SET category = ?, titlename = ?, PackageType = ?, PackageDuratiobn = ?, Price = ?, Description = ? WHERE id = ?',
-      [category, titlename, PackageType, PackageDuratiobn, Price, Description, req.params.id]
+      'UPDATE tbladdpackage SET category = ?, titlename = ?, PackageType = ?, PackageDuration = ?, Price = ?, Description = ? WHERE id = ?',
+      [category, titlename, PackageType, PackageDuration, Price, Description, req.params.id]
     );
 
     res.json({
