@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+gym-management-frontend/node_modules/
+gym-management-backend/node_modules/
+
+# Environment files
+.env
+gym-management-frontend/.env
+gym-management-backend/.env
+
+# Build outputs
+gym-management-frontend/build/
+gym-management-backend/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+/tmp/
+*.tmp
